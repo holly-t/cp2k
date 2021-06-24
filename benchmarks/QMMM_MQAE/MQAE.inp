@@ -14,13 +14,12 @@
     POTENTIAL_FILE_NAME  POTENTIAL
 
     &MGRID
-      CUTOFF 400
+      CUTOFF 300
       COMMENSURATE
     &END MGRID
     &SCF                        ! Parameters controlling the convergence of the scf. This section should not be changed.
       SCF_GUESS RESTART
-      EPS_SCF 1.0E-6
-      MAX_SCF 300
+      EPS_SCF 1.0E-5
       &OT  T
         MINIMIZER  DIIS
         STEPSIZE     1.4999999999999999E-01
@@ -69,7 +68,7 @@
       EI_SCALE14 1.0
       VDW_SCALE14 1.0
       &SPLINE
-        EMAX_SPLINE 1.0E14
+        EMAX_SPLINE 1.0E8
         RCUT_NB [angstrom] 12
       &END SPLINE
     &END FORCEFIELD
