@@ -20,6 +20,7 @@
     &SCF                        ! Parameters controlling the convergence of the scf. This section should not be changed.
       SCF_GUESS RESTART
       EPS_SCF 1.0E-5
+      MAX_SCF 100
       &OT  T
         MINIMIZER  DIIS
         STEPSIZE     1.4999999999999999E-01
@@ -32,7 +33,7 @@
     &END XC
     &QS
      METHOD GPW
-     EPS_DEFAULT 1.0E-12
+     EPS_DEFAULT 1.0E-10
     &END QS
   &END DFT
 
